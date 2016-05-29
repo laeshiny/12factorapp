@@ -1,7 +1,14 @@
 
+GOPATH = ${PWD}
+export GOPATH
+
+BINARY = "api-server"
 
 all: build
 
+get:
+	go get github.com/gin-gonic/gin
+
 build:
-	go build main -o bin/api-server
+	go build -o bin/$(BINARY) main
 
