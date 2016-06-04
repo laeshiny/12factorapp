@@ -43,4 +43,8 @@ case $1 in
 		killall api-server
 		;;
 
+	*)
+		echo "arguments: run|build|start|stop"
+		;;
+
 esac
