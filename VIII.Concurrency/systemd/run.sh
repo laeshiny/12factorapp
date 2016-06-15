@@ -2,6 +2,7 @@
 
 echo "This is systemd test"
 echo "sudo systemctl (status|start|stop|restart|enable|disable) service_name"
+SLEEP_TIME=2
 
 case $1 in
 	"init")
@@ -18,26 +19,26 @@ case $1 in
 		echo "#####################################################"
 		echo "### Check status 12factor_normal.service          ###"
 		echo "#####################################################"
-		sleep 3
-		sudo systemctl status 12factor_normal.service
+		sleep ${SLEEP_TIME}
+		sudo systemctl status 12factor_normal.service -l
 
 		echo "#####################################################"
 		echo "### Check Journal                                 ###"
 		echo "#####################################################"
-		sleep 3
+		sleep ${SLEEP_TIME}
 		journalctl -u 12factor_normal.service
 
 		echo "#####################################################"
 		echo "### Check stop 12factor_normal.service            ###"
 		echo "#####################################################"
-		sleep 3
+		sleep ${SLEEP_TIME}
 		sudo systemctl stop 12factor_normal.service
 
 		echo "#####################################################"
 		echo "### Check status 12factor_normal.service          ###"
 		echo "#####################################################"
-		sleep 3
-		sudo systemctl status 12factor_normal.service
+		sleep ${SLEEP_TIME}
+		sudo systemctl status 12factor_normal.service -l
 
 		;;
 
@@ -50,8 +51,8 @@ case $1 in
 		echo "#####################################################"
 		echo "### Check status 12factor_error.service           ###"
 		echo "#####################################################"
-		sleep 3
-		sudo systemctl status 12factor_error.service
+		sleep ${SLEEP_TIME}
+		sudo systemctl status 12factor_error.service -l
 
 		echo "#####################################################"
 		echo "### Check Journal                                 ###"
@@ -61,14 +62,14 @@ case $1 in
 		echo "#####################################################"
 		echo "### Check stop 12factor_error.service            ###"
 		echo "#####################################################"
-		sleep 3
+		sleep ${SLEEP_TIME}
 		sudo systemctl stop 12factor_error.service
 
 		echo "#####################################################"
 		echo "### Check status 12factor_error.service          ###"
 		echo "#####################################################"
-		sleep 3
-		sudo systemctl status 12factor_error.service
+		sleep ${SLEEP_TIME}
+		sudo systemctl status 12factor_error.service -l
 
 		;;
 
