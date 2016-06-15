@@ -1,0 +1,11 @@
+[Unit]
+Description=12factorapp normal case
+Requires=local-fs.target
+After=local-fs.target
+
+[Service]
+ExecStart=/home/laeshin/github/12factorapp/VIII.Concurrency/systemd/error.py
+
+[Install]
+WantedBy=multi-user.target
+

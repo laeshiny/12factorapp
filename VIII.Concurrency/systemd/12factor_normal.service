@@ -1,0 +1,12 @@
+[Unit]
+Description=12factorapp normal case
+Requires=local-fs.target
+After=local-fs.target
+
+[Service]
+ExecStart=/home/laeshin/github/12factorapp/VIII.Concurrency/systemd/normal.py
+PIDFile=/home/laeshin/github/12factorapp/VIII.Concurrency/systemd/normal.pid
+
+[Install]
+WantedBy=multi-user.target
+
