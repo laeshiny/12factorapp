@@ -44,7 +44,7 @@ case $1 in
 
 	"error")
 		echo "#####################################################"
-		echo "### Run 12factor_error.service                   ###"
+		echo "### Run 12factor_error.service                    ###"
 		echo "#####################################################"
 		sudo systemctl start 12factor_error.service
 
@@ -60,13 +60,13 @@ case $1 in
 		journalctl -u 12factor_error.service
 
 		echo "#####################################################"
-		echo "### Check stop 12factor_error.service            ###"
+		echo "### Check stop 12factor_error.service             ###"
 		echo "#####################################################"
 		sleep ${SLEEP_TIME}
 		sudo systemctl stop 12factor_error.service
 
 		echo "#####################################################"
-		echo "### Check status 12factor_error.service          ###"
+		echo "### Check status 12factor_error.service           ###"
 		echo "#####################################################"
 		sleep ${SLEEP_TIME}
 		sudo systemctl status 12factor_error.service -l
