@@ -4,6 +4,11 @@ echo "This is systemd test"
 echo "sudo systemctl (status|start|stop|restart|enable|disable) service_name"
 
 case $1 in
+	"init")
+		sudo cp 12factor_normal.service /etc/systemd/system/
+		sudo cp 12factor_error.service /etc/systemd/system/
+		;;
+
 	"normal")
 		echo "#####################################################"
 		echo "### Run 12factor_normal.service                   ###"
