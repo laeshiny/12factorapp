@@ -7,8 +7,7 @@ case $1 in
 		;;
 
 	"kill")
-		kill %1
-		kill %2
+		sudo killall fluentd
 		;;
 
 	"logging")
