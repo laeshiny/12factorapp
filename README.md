@@ -1,3 +1,5 @@
+http://www.slideshare.net/laeshinpark/12-factor-app-methodology
+
 # 12 Factor App
 
 ## I. Codebase
